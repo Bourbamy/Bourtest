@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>vue指令</title>
+		<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<p v-text="message"></p>
+		</div>
+		<!-----注意Vue首字母一定要大写---->
+		<script>
+			var app=new Vue({
+				el:"#app",
+				data:{
+					message:"bourbamy"
+				}
+			})
+		</script>
+		
+		<div id="app1">
+			<p>{{message}}</p>
+		</div>
+		<script>
+			var app1=new Vue({
+				el:"#app1",
+				data:{
+					message:"shushu is a handsome boy",
+					school:"南通大学",
+					number:"1602022002"
+				}
+			})
+		</script>
+		
+		<div id="app2">
+			<p v-html="message"></p>
+		</div>
+		<!-----注意Vue首字母一定要大写---->
+		<script>
+			var app2=new Vue({
+				el:"#app2",
+				data:{
+					message:"<a href='http://baidu.com'>这是个超链接<a/>"
+				}
+			})
+		</script>
+		
+		v-on指令：为元素绑定事件
+		
+		<div id="app3">
+			<input type="button" value="事件绑定1" v-on:click="fangfa1" />
+			<input type="button" value="事件绑定2" v-on:mouseenter="fangfa2" />
+			<input type="button" value="事件绑定3" v-on:dblclick="fangfa3" />
+			<p @click="change">{{xinxi}}</p>
+		</div>
+		
+		<script>
+			var app3=new Vue({
+				el:"#app3",
+				data:{
+					xinxi:"lalala"
+				},
+				methods:{
+					change:function(){
+						xinxi = "hahaha";
+					}
+				},
+			})
+		</script>
+		
+	</body>
+</html>

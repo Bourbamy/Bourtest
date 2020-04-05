@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>表单</title>
+	</head>
+	<body>
+		<form>
+		First name: <input type="text" name="firstname"><br>
+		Last name: <input type="text" name="lastname"><br>
+		Password: <input type="password" name="pwd"><br>
+		
+		<!---单选----->
+		<input type="radio" name="sex" value="male">Male<br>
+		<input type="radio" name="sex" value="female">Female<br>
+		
+		
+		<!-----复选框----->
+		<input type="checkbox" name="vehicle" value="Bike">I have a bike<br>
+		<input type="checkbox" name="vehicle" value="Car">I have a car<br />
+		
+		
+		</form>
+		
+		<!-----提交按钮----->
+		<form name="input" action="html_form_action.php" method="get">
+			Username: <input type="text" name="user">
+			<input type="submit" value="Submit">
+		</form>
+		
+		
+		<!------下拉列表---->
+		<form action="">
+			<select name="cars">
+				<option value="volvo">Volvo</option>
+				<option value="saab">Saab</option>
+				<option value="fiat">Fiat</option>
+				<option value="audi">Audi</option>
+			</select>
+		</form>
+		
+		<p>
+			<fieldset> 标签可以将表单内的相关元素分组。
+
+			<fieldset> 标签会在相关表单元素周围绘制边框。
+		</p>
+		<form>
+			 <fieldset>
+			  <legend>Personalia:</legend>
+			  Name: <input type="text"><br>
+			  Email: <input type="text"><br>
+			  Date of birth: <input type="text">
+			 </fieldset>
+		</form>
+	</body>
+</html>

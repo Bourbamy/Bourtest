@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>图片切换</title>
+		<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+	</head>
+	<body>
+		
+		<div id="app">
+			<img :src="imgarr[index]" style="width: 100px;height: 100px;" />
+			<input type="button" @click="prev"  value="上一张" v-show="index!=0"/>
+			<input type="button"  @click="next" value="下一张" v-show="index<imgarr.length-1"/>
+			
+		</div>
+		<script>
+			var app=new Vue({
+				el:"#app",
+				data:{
+					imgarr:[
+						"img/dengyu.jpg",
+						"img/hailang.jpg",
+						"img/summer.jpg",
+						"img/riben.jpg",
+						"img/mingzi.jpg",
+					],
+					index:0
+				},
+				methods:{
+					prev:function(){
+						this.index--;
+					},
+					next:function(){
+						this.index++;
+					}
+					
+				}
+			})
+		</script>
+	</body>
+</html>

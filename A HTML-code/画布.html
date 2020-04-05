@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>canvas</title>
+		
+	</head>
+	<body>
+		<!----canvas画布----->
+		<canvas id="myCanvas" width="450" height="500"></canvas>
+		<script type="text/javascript">
+			var c=document.getElementById("myCanvas");
+			var cxt=c.getContext("2d");
+			cxt.fillStyle="yellowgreen";
+			cxt.fillRect(100,100,250,240);
+		</script>
+		
+		
+		<canvas id="linecanvas" width="200" height="200"></canvas>
+		<script type="text/javascript">
+			var c=document.getElementById("linecanvas");
+			var cxt=c.getContext("2d");
+			cxt.moveTo(10,10);
+			cxt.lineTo(150,50);
+			cxt.lineTo(10,50);
+			cxt.stroke();
+		</script>
+		
+		<canvas id="circlecanvas" width="200" height="100" style="border:1px solid #c3c3c3;">
+			Your browser does not support the canvas element.
+		</canvas>
+		
+		<script type="text/javascript">
+			var c=document.getElementById("circlecanvas");
+			var cxt=c.getContext("2d");
+			cxt.fillStyle="#FF0000";
+			cxt.beginPath();
+			cxt.arc(70,18,15,0,Math.PI*2,true);
+			cxt.closePath();
+			cxt.fill();
+		</script>
+		
+		<canvas id="picture" width="200" height="100" style="border:1px solid #c3c3c3;">
+		Your browser does not support the canvas element.
+		</canvas>
+		<script type="text/javascript">
+			var c=document.getElementById("picture");
+			var cxt=c.getContext("2d");
+			var img=new Image()
+			img.src="img/hailang.jpg"
+			cxt.drawImage(img,0,0);
+		</script>
+		
+	</body>
+</html>

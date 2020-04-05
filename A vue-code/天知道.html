@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>天知道</title>
+		<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	</head>
+	<body>
+		<div id="app" style="margin: 100px 200px 500px 400px;
+							width: 300px;height: auto;">
+			<h1>天知道</h1>
+			<img src="img/riben.jpg" style="width: 250px;height: 100px;" />
+			<div id="search">
+				<input type="text"  size="25" v-model="message" @keyup.enter="getM"/>
+				<input type="button" value="搜索" @click="getM"/>
+			</div>
+			
+		</div>
+		<script>
+			var app=new Vue({
+				el:"#app",
+				data:{
+					message:" "
+				},
+				methods:{
+						
+					getM:function(){
+						alert("HELLO")
+					}
+				}
+				
+			})
+		</script>
+	</body>
+</html>

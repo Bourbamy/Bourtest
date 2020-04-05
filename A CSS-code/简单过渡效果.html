@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>动画简单过渡效果</title>
+		<style>
+			.box{
+				margin-top: 20px;
+				margin-left: 400px;
+			}
+			.txt{
+				transition:  2s;
+			}
+			.bian{
+				
+				color: #03A9F4;
+				text-decoration: underline;
+				transition:  2s;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<h1 class="txt" id="txt">叔叔是超级帅哥啊</h1>
+			<br />
+			<input type="button" value="改变样式" onclick="play()" class="btu"/>
+		</div>
+		<script>
+			var txt=document.getElementById('txt');
+			var btu=document.getElementsByClassName('btu');
+			var flag=true;
+			function play(){
+				
+				if(flag){
+					txt.className='bian';
+					flag=false;
+				}else{
+					txt.className='txt';
+					flag=true;
+				}
+			}
+		</script>
+	</body>
+</html>

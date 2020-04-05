@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>vue结合网络数据开发应用</title>
+		<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	</head>
+	<body>
+		<p>
+			axios网络请求库，结合vue一起；
+		</p>
+		<div id="app"></div>
+		<script>
+			var app=new Vue({
+				el:"#app",
+				data:{
+					joke:"笑话"
+				},
+				methods:{
+					getjokes:function(){
+						axios.get("地址").then(function(response){},function(Error){});
+					}
+					
+				}
+			})
+		</script>
+	</body>
+</html>

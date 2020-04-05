@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>左中右结构加载</title>
+		<style>
+			/*
+			写一个左中右布局占满屏幕，
+			其中左右两块是固定宽度200 ，
+			 中间自适应宽，要求先加载中间块，
+			 请写出结构及样式
+			 这个答案貌似不对
+			 */
+		
+			html,body{ margin: 0px;width: 100%; } 
+			#div1 #div3{
+				width: 200px;
+				height: 200px;
+				background-color: yellowgreen;
+				position: absolute;
+			}
+			#div1{left: 0;top:0;}
+			#div3{right: 0;top:0;}
+			#div2{margin: 0 200px;
+				background-color: blue;
+				height: 200px;}
+			
+		</style>
+	</head>
+	<body>
+		
+		 <div id="div1">我是左边</div>
+		 <div id="div2">我是中间</div>
+		 <div id="div3">我是右边</div>
+	</body>
+</html>

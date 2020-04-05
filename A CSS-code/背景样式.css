@@ -1,0 +1,12 @@
+body{
+	background-color: #A0522D;
+	background-image: url(img/hailang.jpg);
+	/*背景重复*/
+	background-repeat: repeat-y;
+	/*背景定位*/
+	background-position: center;
+	
+	/*背景关联--这样不会虽内容滚动*/
+	background-attachment:fixed;
+	
+}

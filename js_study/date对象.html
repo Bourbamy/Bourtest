@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>测试date对象</title>
+		<script type="text/javascript">
+				
+			function testdate(){
+				//创建日期对象
+				var date1=new Date();
+				alert(date1);
+				alert(date1.getFullYear()+'这是年');
+				alert(date1.getMonth()+1+'这是月');//月份时从0开始的;
+				alert(date1.getDay()+'这是tian');//星期
+				alert(date1.getHours()+'这是xiaoshi');
+				alert(date1.getSeconds()+'这是seconds');
+				alert(date1.getMilliseconds()+'这是haomiao');
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button"value="测试date对象" onclick="testdate()"/>
+	</body>
+</html>

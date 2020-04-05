@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>显示隐藏文本框内容</title>
+		<style>
+			.box{
+				margin-left: 400px;
+			}
+			input{
+				color: #075FAB;
+			}
+		</style>
+	</head>
+	<body>
+		<p>当鼠标点击文本框时，将默认的文字隐藏，当鼠标离开时，显示默认文字</p>
+		<div class="box">
+			<input class="txt"  type="text" value="hello"  />
+			<button >search</button>
+		</div>
+		<script>
+			var flag=true;
+			var txt=document.querySelector('.txt');
+			txt.onfocus=function(){
+//聚焦时应判断文本框内容是否和默认文字相同,相同时清除默认文字
+				if(this.value==='hello'){
+					this.value='';
+				}
+			}
+			txt.onblur=function(){
+				if(this.value===''){
+					this.value='hello';
+				}
+			}
+		</script>
+	</body>
+</html>

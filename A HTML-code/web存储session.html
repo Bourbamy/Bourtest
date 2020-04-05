@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>session</title>
+	</head>
+	<body>
+		<p>sessionStorage 方法针对一个 session 进行数据存储。当用户关闭浏览器窗口后，数据会被删除</p>
+		
+		<script>
+			function clickCounter() {
+				if(typeof(Storage) !== "undefined") {
+					if (sessionStorage.clickcount) {
+						sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+					} else {
+						sessionStorage.clickcount = 1;
+					}
+					document.getElementById("result").innerHTML = "在本 session 中，您已经点击这个按钮 " + sessionStorage.clickcount + " 次。";
+				} else {
+					document.getElementById("result").innerHTML = "抱歉！您的浏览器不支持 Web Storage ...";
+				}
+			}
+			</script>
+			</head>
+			<body>
+			<p><button onclick="clickCounter()" type="button">请点击这里</button></p>
+			<div id="result"></div>
+			<p>请点击按钮使计数器递增。</p>
+			<p>请关闭浏览器或标签页，然后再试一次，计数器会重置。</p>
+			
+	</body>
+</html>

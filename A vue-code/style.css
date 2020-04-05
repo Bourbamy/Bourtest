@@ -1,0 +1,64 @@
+body{
+	margin: 0;
+	padding: 0;
+	background-color: #090547;
+	display: flex;
+}
+#app{
+	background-image: url(img/mingzi.jpg);
+	width: 500px;
+	height: auto; 
+	justify-content: center;
+	border-style: dashed;
+	border: aquamarine;
+}
+.header{
+				width: 500px;
+				height: 80px;
+}
+ button{
+	
+}
+.liebiao{
+	overflow-y: hidden;
+}
+ul{
+	list-style-type: none;
+}
+li{
+	display: inline-block;
+}
+#songs{
+	
+	overflow-y: scroll;
+	height: 300px;
+	width: 500px;
+}
+.song{
+	margin: 10px;
+	width: 220px;
+	overflow-x: hidden;
+	display: inline-block;
+}
+span{
+	font-family: "arial, helvetica, sans-serif";
+	color: aliceblue;
+	overflow: hidden;
+	margin: 20px;
+	
+	
+}
+
+
+
+/* 滚动条设置 */
+::-webkit-scrollbar {  /* 滚动条 */
+  width: 12px;
+}
+::-webkit-scrollbar-thumb {  /* 滚动条上的滚动滑块. */
+  background: linear-gradient(transparent, yellow); /* 背景颜色 */
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(transparent, #00c6ff);
+}

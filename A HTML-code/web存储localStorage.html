@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>web存储localStorage</title>
+	</head>
+	<body>
+		<p>HTML5 使用 JavaScript 来存储和访问数据</p>
+		<p>localStorage - 没有时间限制的数据存储<br />
+			sessionStorage - 针对一个 session 的数据存储</p>
+			
+		<div id="result"></div>
+		<script>
+			// Check browser support
+			if (typeof(Storage) !== "undefined") {
+				// Store
+				localStorage.setItem("lastname", "Gates");
+				// Retrieve
+				document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+			} else {
+				document.getElementById("result").innerHTML = "抱歉！您的浏览器不支持 Web Storage ...";
+			}
+		</script>
+		
+		<script type="text/javascript">
+				if (localStorage.pagecount)
+			{
+			localStorage.pagecount=Number(localStorage.pagecount) +1;
+			}
+		else
+			{
+			localStorage.pagecount=1;
+			}
+		document.write("Visits: " + localStorage.pagecount + " time(s).");
+
+		</script> 
+
+		<p>刷新页面会看到计数器在增长。</p>
+
+		<p>请关闭浏览器窗口，然后再试一次，计数器会继续计数。</p>
+	</body>
+</html>

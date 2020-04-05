@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>v-on元素绑定事件</title>
+		<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<input type="button" @click="fff(666,'老铁')" value="点击" />
+			<input type="text" @keyup.enter="sayhi"  />
+		</div>
+		<script>
+			var app=new Vue({
+				el:"#app",
+				data:{
+					
+				},
+				methods:{
+						
+					fff:function(p1,p2){
+						console.log(p1);
+						console.log(p2);
+					},
+						
+					sayhi:function(){
+						alert("你好呀");
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

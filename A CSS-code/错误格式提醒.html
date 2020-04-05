@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>输入文本格式错误提醒-通过classname 改变样式</title>
+		<style>
+			.tishi{
+				color: #097ABC;
+			}
+			.wrong{
+				color: red;
+			}
+			.right{
+				color: greenyellow;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<label >设置密码：</label>
+			<input type="password" class="psd" />
+			<span class="tishi">请输入6-16位密码</span>
+		</div>
+		<script type="text/javascript">
+			//失去焦点时判断格式
+			var psd=document.querySelector('.psd');
+			var tishi=document.querySelector('.tishi');
+			psd.onblur=function(){
+				if(this.value.length>16 || this.value.length<6){
+					tishi.className='wrong';
+					tishi.innerText='输入有误！';
+				}else{
+					tishi.className='right';
+					tishi.innerText='输入成功！';
+				}
+			}
+		</script>
+	</body>
+</html>
